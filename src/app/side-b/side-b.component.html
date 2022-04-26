@@ -1,0 +1,9 @@
+<h2 [class]="red"> {{ title }}</h2>
+<input type="text" [disabled]="showBody">
+<button (click)="onClick()"> Click to view </button>
+
+<div  *ngIf="showBody">
+  <p *ngFor="let data of Students"> {{ data | json}}</p>
+  <p *ngFor="let data of Students"> {{ data.name | uppercase}}</p>
+</div>
+
